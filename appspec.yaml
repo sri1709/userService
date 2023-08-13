@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:111271881861:task-definition/user-service-td:1"
+        LoadBalancerInfo:
+          ContainerName: "Userservice-Microservice-container-877629"
+          ContainerPort: "8082"
+        PlatformVersion: "LATEST"
